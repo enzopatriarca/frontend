@@ -15,7 +15,7 @@ const router = createRouter({
             name: 'HomeView',
             component: HomeView
         },{
-            path: 'https://frontend-shawpartners-enzo-patriarca-3.onrender.com/Profile/:username',
+            path: '/Profile/:username',
             name:'ProfileView',
             component: ProfileView
             // component: ProdutoView

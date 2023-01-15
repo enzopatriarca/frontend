@@ -19,9 +19,9 @@
               <!-- v-for="item in products" :key="item.id" -->
               <tr style="text-align: initial;" v-for="item in users" :key="item.id">
                 <!-- <a class="stretched-link" :href="`/Profile/${item.login[key]}`"></a> -->
-                <td><a style="text-decoration: none;color: black;" :href="`https://frontend-shawpartners-enzo-patriarca-3.onrender.com/Profile/${item.login}`">{{ item.id }}</a></td>
+                <td><a style="text-decoration: none;color: black;" :href="`/Profile/${item.login}`">{{ item.id }}</a></td>
                 <!-- <a class="stretched-link" :href="`/Profile/${item.login[key]}`"></a> -->
-                <td><a style="text-decoration: none;color: black;" :href="`https://frontend-shawpartners-enzo-patriarca-3.onrender.com/Profile/${item.login}`">{{ item.login }}</a></td>
+                <td><a style="text-decoration: none;color: black;" :href="`/Profile/${item.login}`">{{ item.login }}</a></td>
                 <td>{{ item.html_url}}</td>
                 <td>{{ item.organizations_url}}</td>
               </tr>
