@@ -10,6 +10,7 @@ const history = createWebHistory ();
 
 const router = createRouter({
     history,
+    base: process.env.BASE_URL,
     routes:[{
             path: '/:since?',
             name: 'HomeView',
