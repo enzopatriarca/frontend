@@ -4,9 +4,10 @@
       <div class="navbar navbar-dark bg-dark">
         <h1 id="title">Users List</h1>
       </div>
-      <div class="row">
+      <div style="margin-top: 10px;" class="row">
         <div class="md-12">
-          <table class="table" id="datatable">
+          <h3 style="text-align: initial;">You can click on the id or Name for more details!</h3>
+          <table style="margin-top: 10px;" class="table" id="datatable">
             <thead>
               <tr  style="text-align: initial;">
                 <th>ID</th>
