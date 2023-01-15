@@ -1,15 +1,16 @@
-import {createRouter,  createWebHistory   } from 'vue-router'
+import {createRouter   } from 'vue-router'
 
 import HomeView from '@/views/HomeView.vue';
 import ProfileView from '@/views/ProfileView';
+import PagenotFound from '@/views/PagenotFound';
 // import ContatoView from '@/views/ContatoView';
 // import ProdutoDescricao from '@/views/ProdutoDescricao';
 // import CarrinhoView from '@/views/CarrinhoView';
 // import LoginView from '@/views/LoginView';
-const history = createWebHistory ();
+// const history = createWebHistory ();
 
 const router = createRouter({
-    history,
+    mode: "history",
     base: process.env.BASE_URL,
     routes:[{
             path: '/:since?',
@@ -21,6 +22,12 @@ const router = createRouter({
             component: ProfileView
             // component: ProdutoView
         },
+        {
+            path: '/:pathMatch(.*)*',
+            name:'not-found',
+            component: PagenotFound
+            // component: ProdutoView
+        },  
     ]
 });
 
