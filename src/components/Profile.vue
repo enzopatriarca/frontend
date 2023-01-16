@@ -32,7 +32,7 @@
           <div class="md-12">
             <table class="table" id="datatable_repo">
               <thead>
-                <tr>
+                <tr style="text-align: initial;">
                   <th>ID</th>
                   <th>Name</th>
                   <th>URL of repositorie</th>
@@ -62,6 +62,11 @@
   import axios from "axios";
   import $ from "jquery";
   
+  $('#datatable_repo').DataTable({
+            processing: true,
+            orderCellsTop: true,
+            responsive: true,
+  })
   export default {
     name: 'UserProfile',
     data: function () {
@@ -83,21 +88,11 @@
             console.log(response.data)
             this.repositories = response.data
         })
+
         // $("#datatable").DataTable();
     },
     updated(){
-        $('#datatable_repo').DataTable({
-            "pagingType": "full_numbers",
-            "lengthMenu": [
-                [10, 25, 50, -1],
-                [10, 25, 50, "All"]
-            ],
-            responsive: true,
-            language: {
-                search: "_INPUT_",
-                searchPlaceholder: "Search estimator",
-            }
-        })
+        
     },
     
   }
